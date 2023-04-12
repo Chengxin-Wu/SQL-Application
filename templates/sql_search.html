@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Results</title>
+</head>
+<body>
+   <h1>Search Results</h1>
+    {% if result %}
+    {% for r in result %}
+        <div>{{r}}</div>
+    {% endfor %}
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        document.getElementById("form-id").reset();
+    </script>
+</head>
+<body>
+
+    <form action="http://127.0.0.1:5000/all" method="POST">
+        <label>Canned Querry: </label>
+        <select name="canned querry">
+            <option style="display:none"></option>
+            <option value="world_data">World Data</option>
+            <option value="country_vaccine">Country Vaccine</option>
+        </select>
+        <input type="submit" value="submit"/>
+    </form><br>
+    <form action="http://127.0.0.1:5000/search" method="POST">
+        <label for="coun">Country
+            <select name="Country" id="coun">
+                <option style="display:none"></option>
+                <option value="Australia">Australia</option>
+                <option value="Canada">Canada</option>
+                <option value="China">China</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Egypt">Egypt</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="India">India</option>
+                <option value="Iran">Iran</option>
+                <option value="Italy">Italy</option>
+                <option value="Japan">japan</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="South Africa">South Africa</option>
+                <option value="Thailand">Thailand</option>
+                <option value="United Kingdom">United Kingdom</option>
+            </select>
+        </label><br>
+        <label>
+            Date:
+            <input type="date" name="Date" min="2020-12-02" max="2023-02-27" />
+        </label><br>
+        <label>
+            <input type="checkbox" name="data type" value="Confirm">Confirm
+            <input type="checkbox" name="data type" value="Vaccinated">Vaccinated
+            <input type="checkbox" name="data type" value="Death">Death
+        </label><br>
+        <input type="submit" value="submit" />
+    </form>
+    <form action="http://127.0.0.1:5000/gender" method="POST">
+        <label for="coun">Country
+            <select name="Country" id="coun">
+                <option style="display:none"></option>
+                <option value="Australia">Australia</option>
+                <option value="Canada">Canada</option>
+                <option value="China">China</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Egypt">Egypt</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="India">India</option>
+                <option value="Iran">Iran</option>
+                <option value="Italy">Italy</option>
+                <option value="Japan">japan</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="South Africa">South Africa</option>
+                <option value="Thailand">Thailand</option>
+                <option value="United Kingdom">United Kingdom</option>
+            </select>
+        </label><br>
+        <label>
+            <input type="radio" name="Gender" value="male">Male
+            <input type="radio" name="Gender" value="female">Female
+            <input type="radio" name="Gender" value="all" checked="True">All
+        </label><br>
+        <label>
+            <input type="radio" name="Data" value="Confirm">Confirm
+            <input type="radio" name="Data" value="Death">Death
+        </label><br>
+        <input type="submit" value="submit" />
+    </form>
+    <form action="http://127.0.0.1:5000/sql_search" method="POST">
+        <label>
+            Input SQL Code:
+            <input type="text" name="SQL" autocomplete="off">
+        </label>
+        <input type="submit" value="submit" />
+    </form>
+
+</body>
+</html>

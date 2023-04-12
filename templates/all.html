@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Results</title>
+</head>
+<body>
+	<h1>Search Results</h1>
+	{% if result[0]|length == 4  %}
+		<table>
+			<thead>
+				<tr>
+					<th>Country</th>
+					<th>Confirm</th>
+					<th>Vaccinated</th>
+                    <th>Death</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for r in result %}
+					<tr>
+						<td>{{ r[0] }}</td>
+						<td>{{ r[1] }}</td>
+						<td>{{ r[2] }}</td>
+                        <td>{{ r[3] }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% elif result[0]|length == 2 %}
+		<table>
+			<thead>
+				<tr>
+					<th>Country</th>
+					<th>Vaccinaton Type</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for r in result %}
+					<tr>
+						<td>{{ r[0] }}</td>
+						<td>{{ r[1] }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% else %}
+		<p>No results found.</p>
+	{% endif %}
+</body>
+</html>

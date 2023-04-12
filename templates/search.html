@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Results</title>
+    <style type="text/css">
+    .type{display: inline-block;}
+    </style>
+</head>
+<body>
+   <h1>Search Results</h1>
+    {% if result %}
+    {% for r in result %}
+        <div class="type">
+        {% for r2 in r %}
+            <div>{{r2}}</div>
+        {% endfor %}
+        </div>
+    {% endfor %}
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>
